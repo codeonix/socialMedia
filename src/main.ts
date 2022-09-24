@@ -5,6 +5,7 @@ import { join } from 'path';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
+  require('newrelic');
   const logger = new Logger();
   const app = await NestFactory.create<NestExpressApplication>(AppModule,);
 
